@@ -46,6 +46,7 @@ mall/network/request中链接接口
 ### 2.项目页面和功能
 
 页面：
+<br/>
     前台：
 - [x] 首页页面
 - [x] 分类商品页面
@@ -53,7 +54,7 @@ mall/network/request中链接接口
 - [x] 详细商品信息页面
 - [x] 购物金充值页面
 - [x] 用户个人页面等页面
-- [ ] 
+<br/>
     后台:
 - [x] 管理账号页面
 - [x] 管理用户信息页面
@@ -62,15 +63,41 @@ mall/network/request中链接接口
 - [x] 查看管理员日志页面
 
 功能：
+<br/>
     前台功能
 - [x] 用户浏览商品功能
 - [x] 用户下单商品功能
 - [x] 充值功能
 - [x] 修改用户信息功能。
 - [x] 搜索查询功能
+<br/>
     管理端功能：
 - [x] 增删改查用户账户和用户信息功能
 - [x] 增删改查订单货物功能
 - [x] 条件搜索展示管理员行为操作日志功能。
 
+<br/>
+
+
+### 2.打包部署
+项目打包使用 npm build 命令
+项目部署的话 将dist文件夹直接部署到路径的根目录下（这样会减少很多新手不必要的麻烦）
+
+将dist文件包放在/home/www文件夹下
+在nginx中配置如下
+```javascript
+  server {
+        listen       *  default_server;
+        server_name  _;
+        root        /home/www/dist;
+        # Load configuration files for the default server block.
+        include /etc/nginx/default.d/*.conf;
+        location / {
+                #资源访问失败后定向到index.html
+            try_files $uri $uri/ /index.html;
+        }    
+    }
+```
+
+**项目预览地址**：[预览地址](http://ssdwgg.xyz)
 <br/>
