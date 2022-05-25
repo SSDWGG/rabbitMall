@@ -1,0 +1,37 @@
+.el-carousel__button{
+  width: 20px;
+
+}
+.el-carousel__indicators--outside button{
+  background-color: #ff8198 ;
+  opacity: .3 ;
+}
+.el-carousel__arrow{
+  width: 40px;
+  height: 40px;
+}
+
+.el-carousel__container{
+  height: 420px!important;
+}
+
+
+.el-rate{
+  border: 0px;
+  outline: none;
+}
+
+.el-page-header__title{
+  font-size: 2.5rem;
+}
+.el-page-header__content{
+  font-size: 2.5rem;
+}
+.el-page-header__left .el-icon-back{
+  font-size: 1.5rem;
+  margin-right:15px ;
+}
+.el-page-header__left::after{
+  width: .1rem;
+  height: 2rem;
+}

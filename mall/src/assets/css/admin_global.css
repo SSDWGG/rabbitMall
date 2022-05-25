@@ -1,0 +1,29 @@
+/* 全局样式表       如果在组件内用用此样式表，body等属性会失灵  组件内样式表不能有body等属性*/
+html,body,#app{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+/*!* 面包屑样式 *!*/
+.el-breadcrumb{
+    margin-bottom: 15px;
+    font-size: 12px;
+}
+/*!* 卡片区域 *!*/
+.el-card{
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15) !important;
+}
+/*!* 表格样式 *!*/
+.el-table{
+    margin-top: 15px;
+    font-size: 12px;
+}
+.el-pagination{
+    margin-top: 15px;
+}
+.el-steps{
+    margin: 15px 0;
+}
+.el-step_title{
+    font-size: 13px;
+}
