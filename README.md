@@ -15,6 +15,10 @@ mall/network/request中链接接口
 服务端启动 ：从FinalprojectApplication 文件夹 启动
 前端启动 ：  使用 npm install 安装依赖   使用 npm start 启动
 
+
+系统默认用户账号已经给出 （或者可以自行注册）
+系统管理员账号默认为（rywtest      qwe12345）
+
 <br/>
 
 ### 1.项目截图
