@@ -15,16 +15,16 @@ public class WebConfig extends WebMvcConfigurerAdapter {
      */
     @Override
     public void addCorsMappings(CorsRegistry registry) {
+        // 设置允许跨域的路由
         registry.addMapping("/**")
-                .allowedOrigins(
-                        "http://localhost:8080",   //本地端口跨域
-                        "http://119.3.145.125",   //公网ip访问
-                        "http://ssdwgg.xyz",   //域名1
-                        "http://www.ssdwgg.xyz",   //域名2
-                        "null")
-                .allowedMethods("POST", "GET", "PUT", "OPTIONS", "DELETE")
-                .maxAge(3600)
-                .allowCredentials(true);
+                // 设置允许跨域请求的域名
+                .allowedOriginPatterns("*")
+                // 是否允许证书（cookies）
+                .allowCredentials(true)
+                // 设置允许的方法
+                .allowedMethods("*")
+                // 跨域允许时间
+                .maxAge(3600);
     }
 
 
