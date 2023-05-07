@@ -41,7 +41,7 @@
             </p>
             <p>
               {{ $t("common.coupan") }}:<img
-                :src="require('assets/img/coupan.png')"
+              src="http://panshi-on.oss-cn-hangzhou.aliyuncs.com/yunxiaoding-mini/other/mall/img/coupan.png"
               />
               &nbsp;&nbsp; {{ $t("common.coupantext") }}
             </p>
@@ -79,12 +79,12 @@
                   <p>原创网站,功能不定期更新,可以催更</p>
                   <p>_(:зゝ∠)_添加wechat，作者期待聆听您的建议</p>
                   <img
-                    :src="require('assets/img/addwechat.jpeg')"
+                  src="http://panshi-on.oss-cn-hangzhou.aliyuncs.com/yunxiaoding-mini/other/mall/img/addwechat.jpeg"
                     style="width: 200px"
                   />
                   <p>_(:зゝ∠)_土豪请随意thanks</p>
                   <img
-                    :src="require('assets/img/alipay.jpeg')"
+                  src="http://panshi-on.oss-cn-hangzhou.aliyuncs.com/yunxiaoding-mini/other/mall/img/alipay.jpeg"
                     style="width: 200px"
                   />
                 </el-drawer>
@@ -115,13 +115,13 @@
             <!-- 商品护理说明 -->
             <p>商品护理说明</p>
             <el-image
-              :src="require('assets/img/产品护理方式.jpeg')"
+            src="http://panshi-on.oss-cn-hangzhou.aliyuncs.com/yunxiaoding-mini/other/mall/img/产品护理方式.jpeg"
               lazy
             ></el-image>
             <!-- 商品尺码表 -->
             <p>商品尺码选择对照表</p>
             <el-image
-              :src="require('assets/img/尺码对照表.jpeg')"
+            src="http://panshi-on.oss-cn-hangzhou.aliyuncs.com/yunxiaoding-mini/other/mall/img/尺码对照表.jpeg"
               lazy
             ></el-image>
             <!--商品细节图展示  -->

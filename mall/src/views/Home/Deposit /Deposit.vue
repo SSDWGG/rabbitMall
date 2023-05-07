@@ -1,12 +1,12 @@
 <template>
   <div class="bd">
-    <img :src="require('assets/img/cats.svg')" class="bg-img" alt="">
+    <img src="http://panshi-on.oss-cn-hangzhou.aliyuncs.com/yunxiaoding-mini/other/mall/img/cats.svg" class="bg-img" alt="">
     <div class="sessionquit" @click="logout"
          style=" cursor: pointer;z-index: 2;position: absolute;top: 5%;font-size: 1.6rem;font-weight: 500">quit</div>
 
     <div class="card-group">
       <div class="card">
-        <img :src="require('assets/img/rabbitlogo.png')" alt="logo" style="width: 80px">
+        <img src="http://panshi-on.oss-cn-hangzhou.aliyuncs.com/yunxiaoding-mini/other/mall/img/rabbitlogo.png" alt="logo" style="width: 80px">
          <p style="font-size: 1.3rem;font-weight: 700;color: #ff8198;margin: .3rem">感恩回馈，超级加赠</p>
         <p>充值200额外加赠20！</p>
         <p>充值500额外加赠70！</p>
@@ -15,16 +15,16 @@
         <p>还在等啥，来晚了就没啦~</p>
       </div>
       <div class="card">
-        <img :src="require('assets/img/rabbitlogo.png')" alt="logo" style="width: 80px">
+        <img src="http://panshi-on.oss-cn-hangzhou.aliyuncs.com/yunxiaoding-mini/other/mall/img/rabbitlogo.png" alt="logo" style="width: 80px">
         <p style="font-size: 1.2rem;font-weight: 700;color: #ff8198;margin: .3rem">加入俱乐部，享福利购</p>
         <p>会员身份，解锁多重权益</p>
         <p>入群享天天折扣福利</p>
-        <p>充值即用，限时活动，至高可加赠1000元</p>
+        <p>限时至高可加赠1000元</p>
         <p>您还在观望？</p>
         <p>快来加入我们的会员体系~</p>
       </div>
       <div class="card" style="line-height: 3rem">
-        <img :src="require('assets/img/rabbitlogo.png')" alt="logo" style="width: 80px">
+        <img src="http://panshi-on.oss-cn-hangzhou.aliyuncs.com/yunxiaoding-mini/other/mall/img/rabbitlogo.png" alt="logo" style="width: 80px">
         <p style="font-size: 1.9rem;font-weight: 700;color: #ff8198;margin: 0 auto;">冲鸭！！！</p>
         <p style="font-size: 1.9rem;font-weight: 700;color: #ff8198;margin: 0 auto;">买光这家！</p>
         <input type="text"  v-model="number" placeholder="输入充值金额" >
@@ -45,9 +45,9 @@
           <p>欢迎学习交流，点赞和关注我的<a style="color: #72aea8;font-size: 1.5rem" @click="newwindow( 'https://github.com/SSDWGG')">GitHub</a>，感激不尽！</p>
           <p>原创网站,功能不定期更新,可以催更</p>
           <p>_(:зゝ∠)_添加wechat，作者期待聆听您的建议</p>
-          <img :src="require('assets/img/addwechat.jpeg')" style="width: 200px">
+          <img src="http://panshi-on.oss-cn-hangzhou.aliyuncs.com/yunxiaoding-mini/other/mall/img/addwechat.jpeg" style="width: 200px">
           <p>_(:зゝ∠)_土豪请随意thanks</p>
-          <img  :src="require('assets/img/alipay.jpeg')" style="width: 200px">
+          <img  src="http://panshi-on.oss-cn-hangzhou.aliyuncs.com/yunxiaoding-mini/other/mall/img/alipay.jpeg" style="width: 200px">
         </el-drawer>
       </div>
     </el-drawer>
@@ -236,7 +236,11 @@ export default {
     }
 }
 .card p {
-  text-indent: 2em;
+  // text-indent: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space:nowrap
 }
 @media screen and (max-width: 768px) {
   .bg-img {

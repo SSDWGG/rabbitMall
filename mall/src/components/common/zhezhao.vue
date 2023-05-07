@@ -4,7 +4,7 @@
       <div class="zhezhaodiv" v-if="zhezhao" style="display: flex;align-items: center;justify-content:center;z-index: 999">
         <transition  name = "zzimg"  v-if="zzimgshow">
           <div style="text-align: center">
-            <img :src="require('assets/img/zz.gif')">
+            <img src="http://panshi-on.oss-cn-hangzhou.aliyuncs.com/yunxiaoding-mini/other/mall/img/zz.gif">
             <div id="loading">
               <span></span>
               <span></span>
@@ -13,7 +13,7 @@
               <span></span>
               <span></span>
             </div>
-            <p>感谢您的关注，为您努力加载资源ing...</p>
+            <p>感谢您的关注，为您努力加载资源,即将跳转...</p>
           </div>
         </transition>
       </div>
@@ -98,8 +98,7 @@ export default {
 #loading {
   width:200px;
   height:80px;
-  margin-left: 30px;
-  margin-bottom: 10px;
+  margin: 10px auto;
 }
 #loading span {
   margin: 2px;

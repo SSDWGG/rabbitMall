@@ -12,9 +12,8 @@ Vue.use(less)
 //图片懒加载插件
 import VueLazyLoad from 'vue-lazyload'
 Vue.use(VueLazyLoad, {
-  error: require('assets/img/lazy_errorimg.png'),
-  // loading:require('assets/img/initimg.jpeg'),
-  loading: require('assets/img/chunse.png'),
+  error: "http://panshi-on.oss-cn-hangzhou.aliyuncs.com/yunxiaoding-mini/other/mall/img/lazy_errorimg.png",
+  loading: "http://panshi-on.oss-cn-hangzhou.aliyuncs.com/yunxiaoding-mini/other/mall/img/chunse.png",
 })
 //动画库
 import animated from 'animate.css'

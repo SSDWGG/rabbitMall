@@ -3,7 +3,7 @@
     <!--头部布局-->
     <el-header>
       <div>
-        <img :src="require('assets/img/rabbitlogo.png')" alt class="logo_img" />
+        <img src="http://panshi-on.oss-cn-hangzhou.aliyuncs.com/yunxiaoding-mini/other/mall/img/rabbitlogo.png" alt class="logo_img" />
         <span>YG AdminSystem</span>
       </div>
       <el-button type="info" @click="logout">安全退出</el-button>

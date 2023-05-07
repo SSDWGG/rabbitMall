@@ -53,7 +53,7 @@
             />
           </p>
           <!-- action="http://119.3.145.125:9000/uploadtximg"     action="http://localhost:9000/uploadtximg"   -->
-          <p>
+          <!-- <p>
             ChangeUserimg：<el-upload
               class="upload-demo"
               action="http://119.3.145.125:9000/uploadtximg"
@@ -73,7 +73,7 @@
                 >点击上传小于500kb的jpg格式头像</el-button
               >
             </el-upload>
-          </p>
+          </p> -->
           <div
             class="sessionquit"
             @click="change"

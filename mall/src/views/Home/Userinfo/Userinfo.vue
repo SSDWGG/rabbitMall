@@ -12,7 +12,6 @@
       <div class="line"></div>
       <div class="user">
         <div class="userimg">
-          <!-- <img :src="require('@/assets/img/rabbitlogo.png')" /> -->
           <img :src="this.user.userinfo.tximg" />
         </div>
         <div class="hellouser">
@@ -66,7 +65,7 @@
             <!--            发货标记-->
             <img
               class="send"
-              :src="require('assets/img/alreadsend.png')"
+              src="http://panshi-on.oss-cn-hangzhou.aliyuncs.com/yunxiaoding-mini/other/mall/img/alreadsend.png"
               v-if="item.issend"
             />
           </div>

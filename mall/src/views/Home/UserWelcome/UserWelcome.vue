@@ -3,7 +3,7 @@
     <el-container>
       <el-header class="head" id="top">
         <div class="shopmanage">
-          <img :src="require('assets/img/userwelcome/shopmange.jpeg')" />
+          <img src="http://panshi-on.oss-cn-hangzhou.aliyuncs.com/yunxiaoding-mini/other/mall/img/userwelcome/shopmange.jpeg" />
         </div>
         <div class="nav">
           <ul>
@@ -23,7 +23,7 @@
       <el-main class="userwelcome_body">
         <!--海报-->
         <div class="img1">
-          <img :src="require('assets/img/userwelcome/userwelcome1.jpg')" />
+          <img src="http://panshi-on.oss-cn-hangzhou.aliyuncs.com/yunxiaoding-mini/other/mall/img/userwelcome/userwelcome1.jpg" />
         </div>
 
         <!-- 上新货物-->
@@ -72,13 +72,13 @@
 
         <!--店铺规则介绍-->
         <div class="shoprule">
-          <img :src="require('assets/img/userwelcome/shoprule.jpg')" />
+          <img src="http://panshi-on.oss-cn-hangzhou.aliyuncs.com/yunxiaoding-mini/other/mall/img/userwelcome/shoprule.jpg" />
         </div>
 
         <!--回到顶部  -->
         <div class="backtop">
           <a class="backtopbtn" href="#top" style="cursor: pointer"></a>
-          <img :src="require('assets/img/userwelcome/backtop.jpg')" />
+          <img src="http://panshi-on.oss-cn-hangzhou.aliyuncs.com/yunxiaoding-mini/other/mall/img/userwelcome/backtop.jpg" />
         </div>
       </el-main>
       <el-backtop

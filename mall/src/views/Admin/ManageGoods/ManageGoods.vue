@@ -138,13 +138,12 @@
               >
             </el-tooltip>
             <!-- 上传商品图片 -->
-            <el-tooltip
+            <!-- <el-tooltip
               effect="dark"
               content="上传商品图片"
               :enterable="false"
               style="margin: 5px 0"
             >
-              <!--  action="http://119.3.145.125:9000/uploadgoodsimg"后端实现 -->
               <el-upload
                 class="upload-demo"
                 action="http://119.3.145.125:9000/uploadgoodsimg"
@@ -164,7 +163,7 @@
                   >Up Img</el-button
                 >
               </el-upload>
-            </el-tooltip>
+            </el-tooltip> -->
           </template>
         </el-table-column>
       </el-table>

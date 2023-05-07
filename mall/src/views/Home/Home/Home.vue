@@ -6,7 +6,7 @@
         <el-container>
           <el-header class="asidehead">
             <a class="logo" @click="firstrouter('home')">
-              <img :src="require('assets/img/rabbitlogo.png')" alt="logo" />
+              <img src="http://panshi-on.oss-cn-hangzhou.aliyuncs.com/yunxiaoding-mini/other/mall/img/rabbitlogo.png" alt="logo" />
             </a>
             <div
               class="primary"
@@ -32,11 +32,11 @@
             >
               <img
                 v-show="!primaryshow"
-                :src="require('assets/img/humberger_icon.jpeg')"
+                src="http://panshi-on.oss-cn-hangzhou.aliyuncs.com/yunxiaoding-mini/other/mall/img/humberger_icon.jpeg"
               />
               <img
                 v-show="primaryshow"
-                :src="require('assets/img/close.gif')"
+                src="http://panshi-on.oss-cn-hangzhou.aliyuncs.com/yunxiaoding-mini/other/mall/img/close.gif"
               />
             </a>
           </el-header>
@@ -76,7 +76,7 @@
 
     </el-container>
 
-    <zhezhao v-if="zzshow" :runtime="4000"></zhezhao>
+    <zhezhao v-if="zzshow" :runtime="3000"></zhezhao>
 
   </div>
 </template>
