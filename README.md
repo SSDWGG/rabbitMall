@@ -1,4 +1,5 @@
-**RabbitMall项目地址**：[github 地址](https://github.com/SSDWGG/rabbitMall.git)
+**RabbitMall项目github地址**：[github 地址](https://github.com/SSDWGG/rabbitMall.git)
+**RabbitMall项目线上地址**：[线上地址](http://mall.ssdwgg.cn/)
 
 # RabbitMall
 
@@ -8,7 +9,7 @@
 服务端 使用 springboot 来启服务
 
 
-项目启动方式：
+项目启动方式：(node 版本14.x)
 在 mysql 数据库中建立数据库，导入sql 文件
 sever 中配置一下链接数据库
 mall/network/request中链接接口

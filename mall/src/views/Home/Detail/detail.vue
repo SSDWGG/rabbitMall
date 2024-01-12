@@ -60,9 +60,9 @@
               size="50%"
             >
               <div>
-                <el-button @click="innerDrawer = true"
+                <!-- <el-button @click="innerDrawer = true"
                   >支持小站作者❤️</el-button
-                >
+                > -->
                 <el-drawer
                   title="您的每一次支持都能让小站发展的更好~"
                   :append-to-body="true"
