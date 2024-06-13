@@ -4,8 +4,8 @@ import axios from "axios"
 //做一个拦截器的封装
 export function request(config) {
   const instance1 = axios.create({
-    baseURL: 'http://124.223.119.218:9000/',
-    // baseURL: 'http://localhost:9000/',
+    baseURL: 'http://allsever.ssdwgg.cn/mall',
+    // baseURL: 'http://localhost:9060/mall',
     timeout: 5000,
   })
 

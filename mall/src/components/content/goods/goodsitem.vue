@@ -1,7 +1,7 @@
 <template>
   <div class="goodsitem" @click="detail(goodsItem.goodsid)">
     <div class="image">
-      <img v-lazy="goodsItem.imglist[0].goodsimg" />
+      <img v-if="goodsItem.imglist[0]" v-lazy="goodsItem.imglist[0].goodsimg" />
     </div>
     <div class="content" style="padding: 14px">
       <p class="title">

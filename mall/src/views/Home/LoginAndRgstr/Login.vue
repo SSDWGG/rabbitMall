@@ -97,9 +97,10 @@ export default {
         email: "",
         identifying_code: "",
       },
+      // 管理员账号 admin admin12345
       loginForm: {
         username: "username",
-        password: "password1",
+        password: "username123456",
         // username: "rywtest",
         // password: "qwe12345"
       },

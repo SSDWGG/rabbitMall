@@ -34,7 +34,7 @@ export default {
     runtime: {
       type:Number,
       default(){
-        return 4000           //默认运行4s
+        return 1500           //默认运行1.5s
       }
     }
   },
