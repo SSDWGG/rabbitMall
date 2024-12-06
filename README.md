@@ -109,5 +109,5 @@ mall/network/request中链接接口
     }
 ```
 
-**项目预览地址**：[预览地址](http://ssdwgg.xyz)
+**项目预览地址**：[预览地址](http://mall.ssdwgg.cn)
 <br/>
