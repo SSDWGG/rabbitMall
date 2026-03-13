@@ -1,5 +1,5 @@
-**RabbitMall项目github地址**：[github 地址](https://github.com/SSDWGG/rabbitMall.git)
-**RabbitMall项目线上地址**：[线上地址](http://mall.ssdwgg.cn/)
+**RabbitMall项目线上地址**：[预览地址](http://mall.ssdwgg.site/)
+**github地址**：[github 地址](https://github.com/SSDWGG/rabbitMall.git)
 
 # RabbitMall
 
@@ -108,6 +108,4 @@ mall/network/request中链接接口
         }    
     }
 ```
-
-**项目预览地址**：[预览地址](http://mall.ssdwgg.cn)
 <br/>
