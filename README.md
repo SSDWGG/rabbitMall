@@ -91,11 +91,13 @@ mall/network/request中链接接口
 
 ### 2.打包部署
 项目打包使用 npm build 命令
-项目部署的话 将dist文件夹直接部署到路径的根目录下（这样会减少很多新手不必要的麻烦）
+项目部署的话 将dist文件夹直接部署到路径的根目录下（这样会减少很多不必要的麻烦）
 
+
+### 2.1 非根路径部署部署
 将dist文件包放在/home/www文件夹下
 在nginx中配置如下
-```javascript
+```
   server {
         listen       *  default_server;
         server_name  _;

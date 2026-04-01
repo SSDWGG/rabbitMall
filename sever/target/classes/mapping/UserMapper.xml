@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ryw.mapper.UserMapper"> <!--mapper层的文件包路径   resources以外的路径用.分隔-->
+
+   <update id="changedeleteByid">
+        UPDATE user SET deleted = #{deleted} WHERE id = #{id}
+    </update>
+
+    <delete id="deepDeleteByid">
+        DELETE FROM user WHERE id = #{id}
+    </delete>
+</mapper>

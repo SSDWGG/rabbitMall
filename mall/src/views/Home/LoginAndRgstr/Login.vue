@@ -100,7 +100,7 @@ export default {
       // 管理员账号 admin admin12345
       loginForm: {
         username: "username",
-        password: "username123456",
+        password: "password1",
         // username: "rywtest",
         // password: "qwe12345"
       },
