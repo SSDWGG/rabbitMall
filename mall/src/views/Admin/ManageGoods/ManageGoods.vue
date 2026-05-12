@@ -137,34 +137,7 @@
                 >Up sizecountform</el-button
               >
             </el-tooltip>
-            <!-- 上传商品图片 -->
-            <!-- <el-tooltip
-              effect="dark"
-              content="上传商品图片"
-              :enterable="false"
-              style="margin: 5px 0"
-            >
-              <el-upload
-                class="upload-demo"
-                action="http://119.3.145.125:9000/uploadgoodsimg"
-                :on-preview="handlePreview"
-                :on-remove="handleRemove"
-                :before-remove="beforeRemove"
-                :before-upload="beforeupload"
-                :on-success="imgSuccess"
-                :multiple="false"
-                :limit="1"
-                :data="getgoodsname(scope.row.goodsid)"
-                :on-exceed="handleExceed"
-                :file-list="fileList"
-                :show-file-list="false"
-              >
-                <el-button type="primary" icon="el-icon-edit" size="mini"
-                  >Up Img</el-button
-                >
-              </el-upload>
-            </el-tooltip> -->
-          </template>
+            </template>
         </el-table-column>
       </el-table>
 

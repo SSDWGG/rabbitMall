@@ -52,28 +52,6 @@
               :placeholder="user.userinfo.age"
             />
           </p>
-          <!-- action="http://119.3.145.125:9000/uploadtximg"     action="http://localhost:9000/uploadtximg"   -->
-          <!-- <p>
-            ChangeUserimg：<el-upload
-              class="upload-demo"
-              action="http://119.3.145.125:9000/uploadtximg"
-              :on-preview="handlePreview"
-              :on-remove="handleRemove"
-              :before-remove="beforeRemove"
-              :before-upload="beforeupload"
-              :on-success="imgSuccess"
-              :multiple="false"
-              :limit="1"
-              :data="user"
-              :on-exceed="handleExceed"
-              :file-list="fileList"
-              :show-file-list="false"
-            >
-              <el-button size="small" type="primary"
-                >点击上传小于500kb的jpg格式头像</el-button
-              >
-            </el-upload>
-          </p> -->
           <div
             class="sessionquit"
             @click="change"

@@ -5,8 +5,8 @@ import axios from "axios"
 export function request(config) {
   const instance1 = axios.create({
     // baseURL: '/mall',
-    baseURL: 'http://localhost:9000',
-    timeout: 5000,
+    baseURL: 'https://allsever.ssdwgg.site/mall',
+    timeout: 50000,
   })
 
   //此处是拦截器的作用

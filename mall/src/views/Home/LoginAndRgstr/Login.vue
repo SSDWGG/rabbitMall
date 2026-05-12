@@ -102,7 +102,7 @@ export default {
         username: "username",
         password: "password1",
         // username: "rywtest",
-        // password: "qwe12345"
+        // password: "admin12345"
       },
     };
   },
