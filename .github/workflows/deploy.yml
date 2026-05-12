@@ -1,0 +1,55 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy-vps:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: mall
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - run: npm ci
+      - run: npm run build
+        env:
+          NODE_OPTIONS: --openssl-legacy-provider
+      - name: Deploy to VPS
+        run: |
+          sudo apt-get install -y sshpass
+          sshpass -p "${{ secrets.SSH_PASSWORD }}" rsync -az --delete \
+            -e "ssh -o StrictHostKeyChecking=accept-new" \
+            dist/ \
+            ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/www/wwwroot/ryw-yun-project/mall/
+          sshpass -p "${{ secrets.SSH_PASSWORD }}" ssh -o StrictHostKeyChecking=accept-new \
+            ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
+            "chown -R www:www /www/wwwroot/ryw-yun-project/mall"
+
+  deploy-ghpages:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    defaults:
+      run:
+        working-directory: mall
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - run: npm ci
+      - run: npm run build
+        env:
+          NODE_OPTIONS: --openssl-legacy-provider
+          VUE_APP_PUBLIC_PATH: /rabbitMall/
+      - name: Create 404.html for SPA routing
+        run: cp dist/index.html dist/404.html
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./mall/dist

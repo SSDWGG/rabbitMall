@@ -1,7 +1,16 @@
-**RabbitMall项目线上地址**：[预览地址](http://mall.ssdwgg.site/)
-**github地址**：[github 地址](https://github.com/SSDWGG/rabbitMall.git)
-
 # RabbitMall
+
+### 三端预览地址
+
+| 部署端点 | 地址 |
+|---------|------|
+| VPS HTTPS | [https://mall.ssdwgg.site](https://mall.ssdwgg.site) |
+| VPS HTTP (备用) | [http://mall.aiwgg.cn](http://mall.aiwgg.cn) |
+| GitHub Pages | [https://ssdwgg.github.io/rabbitMall](https://ssdwgg.github.io/rabbitMall) |
+
+**GitHub 仓库**：[https://github.com/SSDWGG/rabbitMall](https://github.com/SSDWGG/rabbitMall)
+
+> CI/CD：`git push origin main` 后 GitHub Actions 自动构建并部署到 VPS 和 GitHub Pages。
 
 ### 前言
 
@@ -16,6 +25,7 @@ mall/network/request中链接接口
 服务端启动 ：从FinalprojectApplication 文件夹 启动
 前端启动 ：  使用 npm install 安装依赖   使用 npm start 启动
 
+> 使用 Node 17+ 需设置环境变量：`NODE_OPTIONS=--openssl-legacy-provider`
 
 系统默认用户账号已经给出 （或者可以自行注册）
 系统管理员账号默认为（rywtest      qwe12345）
@@ -90,24 +100,29 @@ mall/network/request中链接接口
 
 
 ### 2.打包部署
-项目打包使用 npm build 命令
-项目部署的话 将dist文件夹直接部署到路径的根目录下（这样会减少很多不必要的麻烦）
 
+项目使用 `npm run build` 打包（Node 17+ 需要 `NODE_OPTIONS=--openssl-legacy-provider`）。
 
-### 2.1 非根路径部署部署
-将dist文件包放在/home/www文件夹下
-在nginx中配置如下
-```
-  server {
-        listen       *  default_server;
-        server_name  _;
-        root        /home/www/dist;
-        # Load configuration files for the default server block.
-        include /etc/nginx/default.d/*.conf;
-        location / {
-                #资源访问失败后定向到index.html
-            try_files $uri $uri/ /index.html;
-        }    
+部署服务器：124.223.119.218，部署路径：`/www/wwwroot/ryw-yun-project/mall/`
+
+CI/CD 自动化：推送到 main 分支后，GitHub Actions 自动执行：
+- VPS 部署（rsync + chown www:www）
+- GitHub Pages 部署（publicPath=/rabbitMall/，含 404.html SPA fallback）
+
+Nginx 配置要点：
+```nginx
+server {
+    listen 443 ssl http2;
+    server_name mall.ssdwgg.site;
+    root /www/wwwroot/ryw-yun-project/mall;
+    index index.html;
+
+    ssl_certificate     /etc/letsencrypt/live/mall.ssdwgg.site/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/mall.ssdwgg.site/privkey.pem;
+
+    location / {
+        try_files $uri $uri/ /index.html;
     }
+}
 ```
 <br/>
