@@ -294,6 +294,7 @@ const routes = [{
 const router = new VueRouter({
   routes,
   mode: 'history',
+  base: process.env.VUE_APP_PUBLIC_PATH || '/',
   //设置锚点链接跳转
   scrollBehavior(to, from, savedPosition) {
 
@@ -309,7 +310,7 @@ const router = new VueRouter({
 
     //消除子路由的滚动条相互影响
     const position = {}
-    if (to.matched.some(m => m.meta.scrollToTop)) {
+    if (to.matched.length && to.matched.some(m => m.meta.scrollToTop)) {
       position.x = 0
       position.y = 0
     }
@@ -328,8 +329,8 @@ VueRouter.prototype.push = function push(to) {
 router.beforeEach((to, from, next) => {
   //路由中所有的ifelse判断都要在内部实现next，不要在默认路径上面放置next
   // 修改网页title
-  if (to.matched[to.matched.length - 1].meta.title) {
-    document.title = to.matched[to.matched.length - 1].meta.title
+  if (to.matched.length) {
+    document.title = to.matched[to.matched.length - 1].meta.title || '小站欢迎大人的到来~'
   } else {
     document.title = '小站欢迎大人的到来~'
   }
