@@ -5,7 +5,7 @@ import axios from "axios"
 export function request(config) {
   const instance1 = axios.create({
     // baseURL: '/mall',
-    baseURL: 'https://allsever.ssdwgg.site/mall',
+    baseURL: 'https://allsever.aiwgg.cn/mall',
     timeout: 50000,
   })
 
